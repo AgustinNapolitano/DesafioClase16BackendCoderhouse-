@@ -22,7 +22,7 @@ module.exports = class ContenedorChat {
      */
 
     async saveMessage(message) {
-        await knexSQLite('mensajes').insert({author: message.author, text: message.text});
+        await knexSQLite('mensajes').insert({author: message.author, text: message.text, date: fechaformateada});
         // console.log(message);
     }
 
